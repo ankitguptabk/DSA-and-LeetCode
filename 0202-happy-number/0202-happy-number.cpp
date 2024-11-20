@@ -6,15 +6,16 @@ public:
         if(n==1) return true;
         while(n!=1){
             ans=0;
+            if(seen.count(n)) return false;
+            seen.insert(n);
             while(n>0){
                 a=n%10;
                 ans+=a*a;
                 n/=10;
             }
             n=ans;
-            if(seen.count(n)) return false;
-            seen.insert(n);
         }
-        return true;
+        if(n==1) return true;
+        return false;
     }
 };
