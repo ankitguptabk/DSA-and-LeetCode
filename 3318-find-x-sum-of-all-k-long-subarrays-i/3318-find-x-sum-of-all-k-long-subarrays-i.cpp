@@ -26,8 +26,8 @@ int solve(unordered_map<int,int>&mp,int x){
             for(int j=i;j<k+i;j++){               
                 mp[n[j]]++;
             } 
-            int f=solve(mp,x);
-            ans[i]=f;
+            int sum=solve(mp,x);
+            ans[i]=sum;
          }
          return ans;
     }
