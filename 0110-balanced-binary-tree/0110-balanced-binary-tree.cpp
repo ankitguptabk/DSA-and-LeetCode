@@ -22,7 +22,7 @@ public:
         if (root == nullptr) {
             return true;
         }
-        return abs(getHeight(root->left) - getHeight(root->right)) < 2 &&
+        return abs(getHeight(root->left) - getHeight(root->right)) <=1 &&
                isBalanced(root->left) && isBalanced(root->right);
     }
 };
