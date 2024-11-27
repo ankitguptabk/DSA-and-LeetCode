@@ -13,7 +13,7 @@ class Solution {
 private:
     int getHeight(TreeNode* node) {
         if (node == nullptr) {
-            return -1;
+            return 0;
         }
         return 1 + max(getHeight(node->left), getHeight(node->right));
     }
