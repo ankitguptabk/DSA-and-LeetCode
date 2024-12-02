@@ -5,6 +5,7 @@ public:
         int y=a.size();
         int ans=__gcd(x,y);
         string b="";
+        if(s[0]!=a[0]) return "";
         for(int i=0;i<ans;i++){
             b+=s[i];
         }
