@@ -3,7 +3,7 @@ public:
     string removeKdigits(string num, int k) {
         vector<char> st;
         for (char digit:num) {
-            while (!st.empty() && k > 0 && st.back() > digit) {
+            while (!st.empty() && k > 0 && st.back()>digit) {
                 st.pop_back();
                 k--;
             }
