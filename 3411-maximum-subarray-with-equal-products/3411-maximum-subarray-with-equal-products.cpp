@@ -13,7 +13,7 @@ public:
                 if(p==l*g){
                     ans=max(ans,j-i+1);
                 }
-                if(p>1e9 || l>1e9){
+                if(p>INT_MAX || l>INT_MAX){
                     break;
                 }
             }
