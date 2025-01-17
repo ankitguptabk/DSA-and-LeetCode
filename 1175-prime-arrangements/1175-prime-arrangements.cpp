@@ -11,7 +11,7 @@ public:
         const int mod = 1e9 + 7;
         long long result = 1;
         for (int i = 2; i <= y; i++) {
-            result = (result * i) % mod;
+            result=(result*i)%mod;
         }
         return result;
     }
