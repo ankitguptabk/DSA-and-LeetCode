@@ -32,7 +32,6 @@ public:
         for (int i = 0; i < p.size(); i++) {
             if (m[p[i]] != str[i]) return false;
         }
-
         return true;
     }
 };
