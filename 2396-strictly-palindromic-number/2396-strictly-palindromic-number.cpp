@@ -7,7 +7,6 @@ public:
         return true;
     }
     bool isStrictlyPalindromic(int n) {
-        if(n>=2){
             for(int i=2;i<=n-2;i++){
                 string s="";
                 int num=n;
@@ -17,7 +16,6 @@ public:
                 }
                 if(!p(s)) return false;
             }
-        }
         return true;
     }
 };
