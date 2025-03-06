@@ -7,10 +7,8 @@ public:
             if(co<c[i]){
                 break;
             }
-            else{
-                co-=c[i];
-                ans++;
-            }
+            co-=c[i];
+            ans++;
         }
         return ans;
     }
