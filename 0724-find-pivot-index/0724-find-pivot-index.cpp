@@ -1,15 +1,14 @@
 class Solution {
 public:
-    int pivotIndex(vector<int>& nums) {
-        for(int i=0;i<nums.size();i++){
-            int ls=0,rs=0;
-            for(int j=0;j<i;j++){
-                ls+=nums[j];
-            }
-            for(int j=i+1;j<nums.size();j++){
-                rs+=nums[j];
-            }
-            if(ls==rs ) return i;
+    int pivotIndex(vector<int>& n){
+        int ls=0,rs=0;
+        for(auto x:n){
+            rs+=x;
+        }
+        for(int i=0;i<n.size();i++){
+            rs-=n[i];
+            if(ls==rs) return i;
+            ls+=n[i];
         }
         return -1;
     }
