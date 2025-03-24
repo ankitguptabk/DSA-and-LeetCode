@@ -11,7 +11,7 @@ public:
             generate(oc,cc+1,n,c+")",ans);
         }
     }
-    vector<string> generateParenthesis(int n) {
+    vector<string> generateParenthesis(int n){
         vector<string>ans;
         generate(0,0,n,"",ans);
         return ans;
