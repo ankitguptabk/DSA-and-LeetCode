@@ -13,10 +13,8 @@ public:
         for(auto const x:b){
             for(auto const y:a){
                 if(x.first==y.first && x.second<y.second) return false;
+                else if(b.find(y.first)==b.end()) return false;
             }
-        }
-        for(auto const y:a){
-            if(b.find(y.first)==b.end()) return false;
         }
         return true;
     }
