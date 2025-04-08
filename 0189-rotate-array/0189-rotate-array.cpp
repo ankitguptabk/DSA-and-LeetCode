@@ -5,8 +5,6 @@ public:
         for(int i=0;i<n.size();i++){
             a[(i+k)%n.size()]=n[i];
         }
-        for(int i=0;i<a.size();i++){
-            n[i]=a[i];
-        }
+        n=a;
     }
 };
