@@ -8,10 +8,8 @@ public:
             r[i].push_back(s);
         }
         for(int i=0;i<r.size();i++){
-            for(int j=0;j<r[i].size();j++){
-                for(auto x:r[i][j]){
-                    m[x]++;
-                }
+            for(auto x:r[i][0]){
+                m[x]++;
             }
         }
         int b=INT_MIN;
