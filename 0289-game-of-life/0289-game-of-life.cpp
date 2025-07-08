@@ -25,6 +25,6 @@ public:
                 }
             }
         }
-        b.swap(next);
+        swap(b,next);
     }
 };
