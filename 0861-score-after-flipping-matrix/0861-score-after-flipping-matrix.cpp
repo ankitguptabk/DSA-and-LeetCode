@@ -31,7 +31,7 @@ public:
          for(int i=0;i<g.size();i++){
             long long rowval=0;
             for(int j=0;j<g[0].size();j++){
-                rowval=(rowval<<1) | g[i][j];
+                rowval=rowval*2+ g[i][j];
             }
             ans+=rowval;
          }
