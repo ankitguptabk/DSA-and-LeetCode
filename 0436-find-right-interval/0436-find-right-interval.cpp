@@ -2,20 +2,20 @@ class Solution {
 public:
     vector<int> findRightInterval(vector<vector<int>>& a) {
         vector<int> ans;
-        vector<pair<int,int>> b;
+        vector<pair<int,int>> start;
         for(int i=0;i<a.size();i++){
-            b.push_back({a[i][0],i});
+            start.push_back({a[i][0],i});
         }
-        sort(b.begin(),b.end());
+        sort(start.begin(),start.end());
         for(int i=0;i<a.size();i++){
             int t=a[i][1];
-            int l=0,r=b.size()-1;
+            int l=0,r=start.size()-1;
             int x=INT_MAX,y=-1;
             while(l<=r){
                 int m=(l+r)/2;
-                if(b[m].first>=t){
-                    x=b[m].first;
-                    y=b[m].second;
+                if(start[m].first>=t){
+                    x=start[m].first;
+                    y=start[m].second;
                     r=m-1;
                 }
                 else{
