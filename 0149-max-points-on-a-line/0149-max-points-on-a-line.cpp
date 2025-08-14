@@ -12,7 +12,9 @@ public:
                 else m[(double)(p[i][1]-p[j][1])/(double)(p[i][0]-p[j][0])]++;
             }
             int mx = vert;
-            for (auto &it : m) mx = max(mx, it.second);
+            for (auto const &p : m){
+                mx = max(mx, p.second);
+            }
             ans = max(ans, mx + dup);
         }
         return ans;
