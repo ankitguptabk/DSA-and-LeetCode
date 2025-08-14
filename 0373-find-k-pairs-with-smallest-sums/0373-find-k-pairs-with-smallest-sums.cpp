@@ -18,7 +18,7 @@ public:
             ans.push_back({pq.top().second.first,pq.top().second.second});
             pq.pop();
         }
-        reverse(ans.begin(),ans.end());
+        reverse(ans.begin(),ans.end()); // not-necessary.
         return ans;
     }
 };
