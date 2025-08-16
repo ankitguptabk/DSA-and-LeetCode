@@ -10,9 +10,6 @@ public:
                 l++;
                 r--;
             }
-            else if(n[r]>k){
-                r--;
-            }
             else if(n[l]+n[r]>k){
                 r--;
             }
