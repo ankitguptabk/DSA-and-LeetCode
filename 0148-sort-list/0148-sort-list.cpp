@@ -25,6 +25,6 @@ public:
             curr->val=ans[i++];
             curr=curr->next;
         }
-        return head;
+        return head; ///imp
     }
 };
