@@ -5,9 +5,9 @@ public:
         int ans=0;
         for(int val:s){
             if(s.find(val-1)==s.end()){
-                int x=val+1;
+                int x=val;
                 int a=1;
-                while(s.find(x)!=s.end()){
+                while(s.find(x+1)!=s.end()){
                     a++;
                     x++;
                 }
