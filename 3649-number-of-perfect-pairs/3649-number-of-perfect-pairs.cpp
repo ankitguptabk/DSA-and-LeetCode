@@ -10,7 +10,7 @@ public:
         sort(num.begin(), num.end());
         int j = n-2;
         for (int i = n - 1; i >= 0; i--) {
-            while (j >= 0 && num[i] - num[j] <= num[j]) {
+            while (j >= 0 && num[i]-num[j]<=num[j]) {
                 j--;
             }
             ans += i-j-1;
