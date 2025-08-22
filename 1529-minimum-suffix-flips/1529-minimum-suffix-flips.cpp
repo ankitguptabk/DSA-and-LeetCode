@@ -1,14 +1,16 @@
 class Solution {
 public:
     int minFlips(string t){
-        char pre='0';
         int ans=0;
-        for (int i=0;i<t.size();i++) {
-            if(t[i]!=pre){
+        bool change=false;
+        if(t[0]=='1') ans=1;
+        for (int i=1;i<t.size();i++) {
+            if(t[i]!=t[i-1]){
                 ans++;
-                pre=t[i];
+                change=true;
             }
         }
+        if(t[0]=='0' && !change) return 0;
         return ans;
     }
 };
