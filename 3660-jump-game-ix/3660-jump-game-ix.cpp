@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> maxValue(vector<int>& n) {
         int len = n.size();
-        vector<int> leftMax(len), rightMin(len), result(len);
+        vector<int> leftMax(len), rightMin(len), ans(len);
 
         leftMax[0] =n[0];
         rightMin[len-1] =n[len-1];
@@ -13,14 +13,13 @@ public:
         for (int i = len-2; i>= 0;i--) {
             rightMin[i] = min(n[i], rightMin[i + 1]);
         }
-        result[len-1] = leftMax[len-1];
+        ans[len-1] = leftMax[len-1];
         for (int i = len-2; i>= 0; i--) {
-            result[i] = leftMax[i];
+            ans[i] = leftMax[i];
             if (leftMax[i] > rightMin[i + 1]) {
-                result[i] = result[i + 1];
+                ans[i] =ans[i + 1];
             }
         }
-
-        return result;
+        return ans;
     }
 };
