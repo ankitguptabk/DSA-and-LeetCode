@@ -27,8 +27,7 @@ public:
 
             }
             else{
-
-                if(r == row - 1){
+                if(r==row - 1){
                     c++;
                     upward = true;
                 }
