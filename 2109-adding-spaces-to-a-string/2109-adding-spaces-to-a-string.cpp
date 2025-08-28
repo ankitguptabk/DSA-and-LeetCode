@@ -8,7 +8,7 @@ public:
             ans+=" ";
             a=spc[i];
         }
-        ans+=s.substr(a);
+        ans+=s.substr(a,s.size()-a);
         return ans;
     }
 };
