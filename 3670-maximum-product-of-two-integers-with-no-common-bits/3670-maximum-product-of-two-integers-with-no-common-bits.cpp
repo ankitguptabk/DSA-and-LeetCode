@@ -1,31 +1,19 @@
 class Solution {
 public:
     long long maxProduct(vector<int>& n) {
-        if (n.size() < 2) return 0;
-
-        int max_val = *max_element(n.begin(), n.end());
-        int k = static_cast<int>(floor(log2(max_val))) + 1;
-        int mask = 1 << k;
-
-        vector<int> dp(mask, 0);
-        for (int x : n) {
-            dp[x] = x;
-        }
-
-        for (int j = 0; j<k; ++j) {
-            for (int i = 0; i<mask; ++i) {
-                if (i & (1<<j)) {
-                    dp[i] = max(dp[i], dp[i ^ (1 << j)]);
-                }
+        int maxi = 0;
+        for (int x : n) maxi = max(maxi, x);
+        int k = log2(maxi) + 1;
+        int mask = (1 << k) - 1;
+        vector<int> dp(mask + 1, 0);
+        for (int x : n) dp[x] = x;
+        for (int i = 0; i < k; i++) {
+            for (int m = 1; m <= mask; m++) {
+                if (m & (1 << i)) dp[m] = max(dp[m], dp[m ^ (1 << i)]);
             }
         }
-
         long long ans = 0;
-        for (int x : n) {
-            int complement = (mask - 1) ^ x;
-            ans = max(ans, 1LL * x * dp[complement]);
-        }
-
+        for (int x : n) ans = max(ans, 1LL * x * dp[mask ^ x]);
         return ans;
     }
 };
