@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<string> simplifiedFractions(int n) {
         vector<string>ans;
-        unordered_set<double>f;
+        set<double>f;
         for(int i=1;i<n;i++){
             string x="";
             for(int j=i+1;j<=n;j++){
