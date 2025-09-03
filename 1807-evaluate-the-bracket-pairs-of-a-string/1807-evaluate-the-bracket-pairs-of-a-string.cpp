@@ -35,8 +35,8 @@ public:
             }
         }
         string a = "";
-        for (int i = 0; i < ans.size(); i++) {
-            a += ans[i];
+        for (int i=0;i<ans.size(); i++) {
+            a+=ans[i];
         }
         return a;
     }
