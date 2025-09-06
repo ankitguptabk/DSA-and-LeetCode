@@ -9,16 +9,6 @@ public:
             }
         }
         if((xy+yx)%2!=0) return -1;
-        int ans=0;
-        while(xy>=2){
-            ans++;
-            xy-=2; 
-        }
-        while(yx>=2){
-            ans++;
-            yx-=2;
-        }
-        if(xy==1 && yx==1) ans+=2;
-        return ans;
+        return xy/2+yx/2+2*(xy%2);
     }
 };
