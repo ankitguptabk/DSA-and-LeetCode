@@ -10,7 +10,7 @@ public:
                 map[a[l]]--;
             }
             map[a[i]]++;
-            if (!f[i] && map[a[i]] > m) {
+            if (!f[i] && map[a[i]]>m) {
                 f[i] = true;
                 ans++;
                 map[a[i]]--;
