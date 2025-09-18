@@ -19,8 +19,9 @@ public:
             pq.push({g(i), i});
         }
         double ans = 0;
-        for (double x : r)
-            ans += x;
+        for (double x : r){
+            ans+=x;
+        }
         return ans / n;
     }
 };
