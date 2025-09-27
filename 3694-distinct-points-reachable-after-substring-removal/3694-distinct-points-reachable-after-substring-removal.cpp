@@ -1,7 +1,6 @@
 class Solution {
 public:
     int distinctPoints(string s, int k) {
-        string brivandeko = s;
         int n = s.size();
         vector<pair<int,int>> a;
         int c = 0, d = 0;
