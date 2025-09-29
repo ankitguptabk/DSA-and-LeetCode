@@ -8,6 +8,7 @@ public:
         for(int i=0;i<a.size();i++){
             if(a[i]<k){
                 x=true;
+                break;
             }
             else if(a[i]==k){
                 y=true;
