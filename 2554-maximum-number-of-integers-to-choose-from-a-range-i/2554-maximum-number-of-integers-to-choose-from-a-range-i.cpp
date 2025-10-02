@@ -5,7 +5,7 @@ public:
         vector<int>x;
         sort(b.begin(),b.end());
         while(c<=n && s+c<=m){
-            if(find(b.begin(),b.end(),c)==b.end()){
+            if(!binary_search(b.begin(), b.end(), c)){
                 s+=c;
                 x.push_back(c);
             }
