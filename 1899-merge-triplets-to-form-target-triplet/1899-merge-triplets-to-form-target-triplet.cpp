@@ -7,8 +7,8 @@ public:
             int x=tri[i][0], y=tri[i][1], z=tri[i][2]; 
             if(x<=a && y<=b && z<=c){
                 if(x>p) p=x;
-                q=max(q,y);
-                r=max(r,z);
+                if(y>q) q=y;
+                if(z>r) r=z;
             }
         }
         return p==a && q==b && r==c;
