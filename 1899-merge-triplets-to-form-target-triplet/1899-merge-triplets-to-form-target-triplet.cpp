@@ -6,7 +6,7 @@ public:
         for(int i=0;i<tri.size();i++){
             int x=tri[i][0], y=tri[i][1], z=tri[i][2]; 
             if(x<=a && y<=b && z<=c){
-                p=max(p,x);
+                if(x>p) p=x;
                 q=max(q,y);
                 r=max(r,z);
             }
