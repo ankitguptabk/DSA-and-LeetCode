@@ -2,15 +2,19 @@ class Solution {
 public:
     int maximumLengthSubstring(string s) {
         int ans=0;
-        for(int i=0;i<s.size();i++){
-            unordered_map<char,int>f;
-            int x=0;
-            for(int j=i;j<s.size();j++){
-                f[s[j]]++;
-                if(f[s[j]]>2) break;
-                x++;
-                ans=max(ans,x);
+        unordered_map<char,int>f;
+        int l=0;
+        for(int r=0;r<s.size();r++){
+            f[s[r]]++;
+            while(f[s[r]]>2){
+                f[s[l]]--;
+                l++;
             }
+            int x=0;
+            for(auto const &p:f){
+                x+=p.second;
+            }
+            if(x>ans) ans=x;
         }
         return ans;
     }
