@@ -15,9 +15,7 @@ public:
                 }
             }
             if(!inval && z==p.size()) ans.push_back(true);
-            else{
-                ans.push_back(false);
-            }
+            else ans.push_back(false);
         }
         return ans;
     }
