@@ -1,3 +1,4 @@
+// WOW! question for bitwise
 class Solution {
 public:
     int maximumXOR(vector<int>& n) {
