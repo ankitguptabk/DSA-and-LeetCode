@@ -14,11 +14,11 @@ public:
                 if(used[i]) continue;
 
                 int diff = 0;
-                for(int j = 0; j < 8; j++) {
+                for(int j = 0; j<8; j++) {
                     if(cur[j] != b[i][j]) diff++;
                 }
-                if(diff == 1) {
-                    if(b[i] == e) return steps + 1;
+                if(diff==1) {
+                    if(b[i] ==e) return steps + 1;
                     q.push_back({b[i], steps + 1});
                     used[i] = true;
                 }
