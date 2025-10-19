@@ -10,13 +10,13 @@ public:
             }
         }
         vector<int>a(x.begin(),x.end());
+        if(a.size()==0) return k;
         vector<int>b;
         for(int i=1;i<=y+k;i++){
             if(i%k==0){
                 b.push_back(i);
             }
         }
-        if(a.size()==0) return b[0];
         for(int i=0;i<b.size();i++){
             if(i<a.size() && b[i]!=a[i]) return b[i];
             if(i>=a.size() && i<b.size()) return b[i];
