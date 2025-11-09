@@ -1,7 +1,6 @@
 class Solution {
 public:
     long long countMajoritySubarrays(vector<int>& n, int t) {
-
         int sz =(int)n.size();
         int pre =sz +1;
         int m = 2*sz+2;
