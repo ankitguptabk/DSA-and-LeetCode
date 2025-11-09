@@ -9,7 +9,6 @@ public:
 
         cnt[pre] = 1;
         acc[pre] = 1;
-
         long long ans = 0;
         for(int i=0;i<sz;i++){
             if(n[i] == t) pre++;
