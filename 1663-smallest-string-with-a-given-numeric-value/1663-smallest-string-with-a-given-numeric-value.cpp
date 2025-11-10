@@ -9,9 +9,9 @@ public:
             }
             else{
                 ans[i]='a'+k-n;
-                n+=k-n;
+                n=k;
+                return ans;
             }
-            if(n==k) return ans;
         }
         return ans;
     }
