@@ -20,9 +20,9 @@ public:
             if (i == 0) ans = max(ans, 1 + r[1]);
             else if (i == s - 1) ans = max(ans, 1 + l[s - 2]);
             else{
-                ans = max(ans, l[i - 1] + 1);
-                ans = max(ans, r[i + 1] + 1);
-                if (n[i + 1] >= n[i - 1]) ans = max(ans, l[i - 1] + 1 + r[i + 1]);
+                ans = max(ans, l[i-1]+1);
+                ans = max(ans, r[i+1]+1);
+                if (n[i + 1] >= n[i - 1]) ans = max(ans, l[i - 1]+1+r[i + 1]);
             }
         }
         return min(ans, s);
