@@ -6,10 +6,10 @@ public:
         if (s == 1) return 1;
         vector<int> l(s, 1), r(s, 1);
 
-        for (int i = 1; i < s; i++) {
+        for (int i=1;i<s;i++) {
             if (n[i] >= n[i - 1]) l[i] = l[i - 1] + 1;
         }
-        for (int i = s - 2; i >= 0; i--) {
+        for (int i = s-2;i>=0;i--) {
             if (n[i] <= n[i + 1]) r[i] = r[i + 1] + 1;
         }
         int ans = 1;
