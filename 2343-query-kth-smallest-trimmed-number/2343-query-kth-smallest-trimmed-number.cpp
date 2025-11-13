@@ -6,7 +6,7 @@ public:
         for(int i=0;i<q.size();i++){
             int a=q[i][0];
             int b=q[i][1];
-            vector<string>x(n.begin(),n.end());
+            vector<string>x=n;
             vector<pair<string,int>>y;
             for(int j=0;j<x.size();j++){
                 x[j]=x[j].substr(k-b,b);
