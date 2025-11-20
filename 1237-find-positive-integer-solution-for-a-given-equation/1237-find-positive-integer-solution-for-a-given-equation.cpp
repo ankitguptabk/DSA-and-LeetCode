@@ -14,8 +14,8 @@ class Solution {
 public:
     vector<vector<int>> findSolution(CustomFunction& customfunction, int z) {
         vector<vector<int>>ans;
-        int x=1,y=1000;
-        while(x<=1000 && y>=1){
+        int x=1,y=z;
+        while(x<=z && y>=1){
             int val=customfunction.f(x,y);
             if(val==z){
                 ans.push_back({x,y});
