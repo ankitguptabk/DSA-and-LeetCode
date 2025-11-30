@@ -1,25 +1,28 @@
 class Solution {
 public:
     int minSubarray(vector<int>& n, int p) {
-        vector<long long>pref(n.size()+1,0);
+        long long s=0;
+        for(int x:n) s += x;
+        int t = s%p;
+        if(t == 0) return 0;
+
+        unordered_map<int,int> m;
+        m[0] = -1;
+
+        long long pref = 0;
+        int ans = n.size();
+
         for(int i=0;i<n.size();i++){
-            pref[i+1]=pref[i]+n[i];
-        }
-        long long sum = pref[n.size()];
-        int t=sum %p;
-        if(t==0) return 0;
-        map<int,int>m;
-        m[0]=0;
-        int ans=n.size();
-        for(int i = 1 ;i <= n.size();i++){
-            int c= pref[i] % p;
-            int need=(c-t+p) % p;
+            pref = (pref+n[i])%p;
+
+            int need = (pref-t+p) % p;
+
             if(m.count(need)){
-                ans=min(ans,i-m[need]);
+                ans=min(ans, i-m[need]);
             }
-            m[c]=i;
+            m[pref]=i;
         }
         if(ans==n.size()) return -1;
-        return ans;
+        else return ans;
     }
 };
