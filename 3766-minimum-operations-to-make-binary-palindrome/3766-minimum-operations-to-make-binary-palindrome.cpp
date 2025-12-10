@@ -13,7 +13,7 @@ public:
             int g=INT_MAX,f=x,b=x;
             bool a=false,d=false;
             while(a==false){
-                string c=bitset<32>(f).to_string();
+                string c=bitset<16>(f).to_string();
                 int p=c.find('1');
                 c=c.substr(p);
                 if(palin(c)){
@@ -22,7 +22,7 @@ public:
                 else f++;
             }
             while(d==false && b>=1){
-                string c=bitset<32>(b).to_string();
+                string c=bitset<16>(b).to_string();
                 int p=c.find('1');
                 c=c.substr(p);
                 if(palin(c)){
