@@ -10,7 +10,6 @@ public:
             s.insert(b[i]);
             x.push_back(vector<char>(s.begin(), s.end()));
         }
-
         bool changed = true;
         while (changed) {
             changed = false;
