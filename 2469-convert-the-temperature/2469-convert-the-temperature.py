@@ -4,4 +4,4 @@ class Solution(object):
         :type celsius: float
         :rtype: List[float]
         """
-        return [c+273.15000, c*1.80+32.00000]
+        return [c+273.15, c*1.80+32]
