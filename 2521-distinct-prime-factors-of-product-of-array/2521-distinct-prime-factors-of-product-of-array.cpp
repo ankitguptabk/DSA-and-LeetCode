@@ -7,7 +7,6 @@ public:
                 used.insert(2);
                 while (x % 2 == 0) x /= 2;
             }
-
             for (int i=3;i*i<= x; i+=2) {
                 if (x%i==0) {
                     used.insert(i);
