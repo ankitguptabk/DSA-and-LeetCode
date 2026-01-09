@@ -6,7 +6,7 @@ public:
         int j=0;
         for(int i=0;i<n;i++){
             stk.push(pushed[i]);
-            while(!stk.empty() && j<n && stk.top()==popped[j]){
+            while(!stk.empty() && stk.top()==popped[j]){
                 stk.pop();
                 j++;
             }
