@@ -6,7 +6,7 @@ public:
         unordered_map<char,int>m;
         for(int i=0;i<s.size();i++){
             if(m[s[i]]>0){
-                a=max(a,int (x.size()));
+                a=max(a,int(x.size()));
                 while(x[0]!=s[i]){
                     m[x[0]]--;
                     x.erase(0,1);
