@@ -17,6 +17,6 @@ public:
                 }
             }
         }
-        return (int)(dp[0][0] + 1e-9);
+        return (int)(dp[0][0]);
     }
 };
