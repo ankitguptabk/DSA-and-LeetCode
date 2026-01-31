@@ -2,19 +2,24 @@ class Solution {
 public:
     int minimumK(vector<int>& nums) {
         int n=nums.size();
-        int k=1;
-        while(true){
-            long long ops=0;
+        int l=1, r=100000;
+        int ans=INT_MAX;
+        while(l<=r){
+            int k=l+(r-l)/2;
+            long long ops=0, limit=1LL*k*k;
             for(int num:nums){
                 ops+=(num-1 +k)/k;
-
-                if(ops>1LL*k*k) break;
+                if(ops>limit) break;
             }
-            if(ops<= 1LL*k*k){
-                return k;
+            if(ops<= limit){
+                ans=k;
+                r=k-1;
+            }
+            else{
+                l=k+1;
             }
             k++;
         }
-        return 1;
+        return ans;
     }
 };
