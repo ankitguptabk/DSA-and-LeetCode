@@ -6,10 +6,7 @@ public:
         while(true){
             long long ops=0;
             for(int num:nums){
-                if(num%k==0){
-                    ops+=num/k;
-                }
-                else ops+=num/k+1;
+                ops+=(num-1 +k)/k;
 
                 if(ops>1LL*k*k) break;
             }
