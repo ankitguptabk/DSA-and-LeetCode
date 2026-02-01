@@ -7,7 +7,7 @@ public:
             if(x<=n){
                 ans++;
             }
-            x+=pow(2,p);
+            x+=(1<<p);
             p++;
         }
         return ans;
