@@ -4,11 +4,10 @@ public:
         int n=words.size();
         int ans=0;
         sort(words.begin(), words.end());
-        vector<bool>used(n,false);
         for(int i=0;i<n;i++){
+            if(words[i].size()<k) continue;
             string pref=words[i].substr(0,k);
             int c=0, j=i+1;
-            if(words[i].size()<k) continue;
             while(j<n && pref==words[j].substr(0,k)){
                 if(pref==words[j].substr(0,k)){
                     c++;
